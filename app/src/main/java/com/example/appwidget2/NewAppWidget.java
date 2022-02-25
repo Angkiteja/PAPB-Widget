@@ -8,8 +8,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.RemoteViews;
 
-import androidx.viewbinding.BuildConfig;
-
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -19,8 +17,9 @@ import java.util.Date;
 public class NewAppWidget extends AppWidgetProvider {
     //AppWidgetProvider extends dari broadcastReceiver
 
-//    isi counter disimpan di sharedPreferences
-    private final static String mSharedPref = BuildConfig.BUILD_TYPE;
+    //    isi counter disimpan di sharedPreferences
+    private final static String mSharedPref = BuildConfig.APPLICATION_ID;
+
     //key dari counternya
     private final static String COUNT_KEY = "count";
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
